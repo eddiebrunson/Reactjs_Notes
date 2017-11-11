@@ -1,6 +1,6 @@
 # React Notes
 
-![](http://progressed.io/bar/20?title=Progress)
+![](http://progressed.io/bar/25?title=Progress)
 
 ---
 
@@ -36,3 +36,26 @@ Composition is built from *simple* functions. Let's look at an example:
 function getProfileLink (username) {
 	return 'https://github.com/' + username
  }
+```
+
+```javascript
+function getProfilePic (username) {
+	return 'https://github.com' + username + '.png?size=200'
+}
+```
+
+The above functions are *simple functions*, so to compose them, we just combine them together inside another function:
+
+```javascript 
+function getProfileData (username) {
+	return {
+		pic: getProfilePic(username),
+		link: getProfileLink(username)
+	}
+}
+```
+
+Remember a good function should always follow the **"DOT"** rule:
+
+Do one thing
+
