@@ -58,4 +58,26 @@ function getProfileData (username) {
 Remember a good function should always follow the **"DOT"** rule:
 
 Do one thing
+___
+
+### Rending UI with React 
+
+--> React uses JavaScript objects to create React elements to describe what we want the page to look like and React is in charge of generating the DOM node to achieve the restult
+
+--> Note the difference between *impreative* and *declarative* code. 
+
+**Imprerative:** is when you list out the step for the code 
+
+**Declarative:** is when you declare exactly what you want the code to do 
+
+So, in other words we aren't telling React what to do; but rather writing React elements that decribes what the page should look like, and React does all the implementation work to get it done. 
+
+--> When creating React elements it's important to remember that we are describing DOM nodes and not HTML strings
+
+--> Virtual DOM is not not real DOM elements that we are creating instead it's just objects that describe real DOM nodes
+
+---
+When we call React.creatElement we haven't actually created anything in the DOM yet
+
+*Note:* You can't use the default **'for'** attribute. Just like you have to use className instead of Class, you have to use **htmlfor** instead of **for**. B/c **'for'** is a reserved word in JavaScript. 
 
