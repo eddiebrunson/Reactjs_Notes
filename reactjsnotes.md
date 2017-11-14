@@ -81,3 +81,37 @@ When we call React.creatElement we haven't actually created anything in the DOM 
 
 *Note:* You can't use the default **'for'** attribute. Just like you have to use className instead of Class, you have to use **htmlfor** instead of **for**. B/c **'for'** is a reserved word in JavaScript. 
 
+--> React's .createElement() method to construct a "React element"
+
+--> The .createElement() method has the following signature:
+
+```JavaScript
+React.createElement ( /*type*/, /*props*/, /*content*/);
+```
+
+* **type**- either a string or a React Component 
+
+--> this can be a string of any existing HTML elements (eg. 'p', 'span', or 'header') or you could pass a React component 
+
+* **props**- either null or an object 
+--> this is an object of HTML attributes and custom data about the elements 
+
+* **content-null**- a string, a React Element, or a React Component. Anything that you pass here will be the content of the rendered element. This can include plain text, JavaScript, or other React elements, etc. 
+___
+
+### Nesting-
+
+--> React is a library for creating user interfaces. We can nest elements inside other elements 
+
+--> Instead of writing child elements one by one, React let's us provide an array of elements to use as children. 
+
+**Note:** when using an Array as children React will complain if you don't give it a *key* 
+
+```JavaScript
+React.craeteElement('li, {[key]: person.name}, person.name)
+```
+
+--> the *key* prop helps keep track of changes
+
+
+
