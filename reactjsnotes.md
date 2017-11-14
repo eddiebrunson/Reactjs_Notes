@@ -108,7 +108,7 @@ ___
 **Note:** when using an Array as children React will complain if you don't give it a *key* 
 
 ```JavaScript
-React.craeteElement('li, {[key]: person.name}, person.name)
+React.craeteElement(li, {key: person.name}, person.name)
 ```
 
 --> the *key* prop helps keep track of changes
