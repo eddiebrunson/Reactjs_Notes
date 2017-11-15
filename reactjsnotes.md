@@ -186,9 +186,9 @@ All props are stored in *this.props* object. So to access this text prop from in
 
 Stateless Functional Components are, stateless because these components do not have to worry about managing changing data. They just display the data. 
 
---> When is it appropriate to use a Stateless Functional Component?
+:question: When is it appropriate to use a Stateless Functional Component?
 
-:white_check_mark: When all the component needs is a *render* method
+:white_check_mark: When all the component needs is a **render** method
 
-
+--> If a component is only using a **render** method to display content, then it can be converted into a Stateless Functional Component. 
 
