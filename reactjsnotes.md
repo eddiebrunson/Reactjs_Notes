@@ -197,4 +197,16 @@ Stateless Functional Components are, stateless because these components do not h
 
 State is a key property of React components. Being familar with how state is used and how state is set and reset will help streamline building the UI of your App. 
 
+---
+
+### Controlled Components 
+
+-components which renders a form, but the source of truth for that form state lives inside of the component state rather than inside of the DOM. 
+
+--> With Controlled Components our form state lives inside of the component. Because of this, we can easily update our UI based on that form state. 
+
+--> Object destructuring- revisit 
+
+---
+
 
