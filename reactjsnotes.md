@@ -209,7 +209,7 @@ State is a key property of React components. Being familar with how state is use
 
 ---
 
-Notes from [Facebook](facebook.github.io)
+Notes from [Facebook](https://reactjs.org)
 
 ### Converting a Function to a Class
 
