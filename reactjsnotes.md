@@ -113,5 +113,25 @@ React.craeteElement(li, {key: person.name}, person.name)
 
 --> the *key* prop helps keep track of changes
 
+Example:
 
+```JavaScript
+import React from 'react'
+import ReactDOM from 'react-dom'
 
+const people = [
+   { name: 'Micheal' },
+   { name: 'Ryan' },
+   { name: 'Tyler' }   
+]
+```
+
+```JavaScript
+const element = React.createElement ( 'ol', null people.map((person, index) => (React.createElement('li', {key: index}, person.name)
+))
+)
+
+ReactDOM.render(
+   element, 
+   document.getElementById('root')
+)
