@@ -135,3 +135,51 @@ ReactDOM.render(
    element, 
    document.getElementById('root')
 )
+```
+
+---
+
+**Caveat:** Always start component names with a capital letter
+
+.createElement() returns one root element
+
+JSX get complied down to calls to React's *.createElement()* method tat outputs HTML to be rendered in the browser
+
+**Note:** Single Responsibility Principle: is a CS principle that states that every module or class should have responsibility over a single part of the functionality provided by the software. 
+
+--> **"A Class should only have one reason to change"** 
+
+---
+
+Webpack- is a complier which takes JSX code and complies it down to real JavaScript code that we can actually run in the browser
+
+### Composition over Inheritance 
+
+* Revisit 
+*
+*
+*
+
+---
+
+--> **3 new concepts of React:**
+
+* props- allows you to pass data into your components 
+* Functional Components- an alternative way to create components
+* Controlled Components- allow you to hook up the forms in your application to your component state
+
+--> The way you build a React app is by building a bunch of smaller React Components and then composing them together 
+
+--> We can think of passing *props* to components just as we pass arguements into functions. Just as we can access arguments passed into a regular JavaScript function, we can access a component's prop with **this.props** or props in the stateless functional components 
+
+--> When passing in a prop to a prop, you just type out the name of the prop as if it's a regular HTML attribute.
+
+--> A **prop** is any input you pass to a React component. Just like an HTML attribute, a prop name and value are added to the component. 
+
+**Caveat:** Components must return a single root element. This is wehy we add a <div> to contain all the elements. 
+
+All props are stored in *this.props* object. So to access this text prop from inside the component, we'd us this.props.text 
+
+---
+
+
