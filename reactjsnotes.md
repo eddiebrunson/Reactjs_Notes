@@ -147,7 +147,7 @@ JSX get complied down to calls to React's *.createElement()* method tat outputs 
 
 **Note:** Single Responsibility Principle: is a CS principle that states that every module or class should have responsibility over a single part of the functionality provided by the software. 
 
---> **"A Class should only have one reason to change"** 
+**"A Class should only have one reason to change"** 
 
 ---
 
@@ -162,7 +162,7 @@ Webpack- is a complier which takes JSX code and complies it down to real JavaScr
 
 ---
 
---> **3 new concepts of React:**
+**3 new concepts of React:**
 
 * props- allows you to pass data into your components 
 * Functional Components- an alternative way to create components
@@ -181,5 +181,14 @@ Webpack- is a complier which takes JSX code and complies it down to real JavaScr
 All props are stored in *this.props* object. So to access this text prop from inside the component, we'd us this.props.text 
 
 ---
+
+### Stateless Functional Components & props 
+
+Stateless Functional Components are, stateless because these components do not have to worry about managing changing data. They just display the data. 
+
+--> When is it appropriate to use a Stateless Functional Component?
+
+:white_check_mark: When all the component needs is a *render* method
+
 
 
