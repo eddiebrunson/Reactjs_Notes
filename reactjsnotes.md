@@ -192,3 +192,9 @@ Stateless Functional Components are, stateless because these components do not h
 
 --> If a component is only using a **render** method to display content, then it can be converted into a Stateless Functional Component. 
 
+
+### Add State to a Component 
+
+State is a key property of React components. Being familar with how state is used and how state is set and reset will help streamline building the UI of your App. 
+
+
