@@ -209,4 +209,15 @@ State is a key property of React components. Being familar with how state is use
 
 ---
 
+Notes from [Facebook](facebook.github.io)
+
+### Converting a Function to a Class
+
+1. Create a ES6 class with the same name that extends **React.Component** 
+2. Add a single empty method to it called **render()**
+3. Move the body of the function into the render() method
+4. Replace **props** with this.props in the render() body
+5. Delete the remaining empty function declaration 
+
+
 
