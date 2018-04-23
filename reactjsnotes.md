@@ -219,5 +219,11 @@ Notes from [Facebook](https://reactjs.org)
 4. Replace **props** with this.props in the render() body
 5. Delete the remaining empty function declaration 
 
+### Adding local state to a Class
+
+--> to use state correctly you do **not** modify state directly 
+--> so we use setState()
+
+// wrong
 
 
