@@ -17,7 +17,7 @@ Top 3 Reasons:
 
 ### Benefits of Composition:
 
---> the concept of composition is such a large part of whwat makes React awesome and incredible to work with. 
+--> the concept of composition is such a large part of what makes React awesome and incredible to work with. 
 
 --> Remember that composition is just combining simple functions together to create complex functions.
 
@@ -62,11 +62,11 @@ ___
 
 ### Rending UI with React 
 
---> React uses JavaScript objects to create React elements to describe what we want the page to look like and React is in charge of generating the DOM node to achieve the restult
+--> React uses JavaScript objects to create React elements to describe what we want the page to look like and React is in charge of generating the DOM node to achieve the result
 
 --> Note the difference between *impreative* and *declarative* code. 
 
-**Imprerative:** is when you list out the step for the code 
+**Imprerative:** is when you list out the steps for the code 
 
 **Declarative:** is when you declare exactly what you want the code to do 
 
@@ -74,7 +74,7 @@ So, in other words we aren't telling React what to do; but rather writing React 
 
 --> When creating React elements it's important to remember that we are describing DOM nodes and not HTML strings
 
---> Virtual DOM is not not real DOM elements that we are creating instead it's just objects that describe real DOM nodes
+--> Virtual DOM is not real DOM elements that we are creating instead it's just objects that describe real DOM nodes
 
 ---
 When we call React.creatElement we haven't actually created anything in the DOM yet
@@ -143,7 +143,7 @@ ReactDOM.render(
 
 .createElement() returns one root element
 
-JSX get complied down to calls to React's *.createElement()* method tat outputs HTML to be rendered in the browser
+JSX get complied down to calls to React's *.createElement()* method that outputs HTML to be rendered in the browser
 
 **Note:** Single Responsibility Principle: is a CS principle that states that every module or class should have responsibility over a single part of the functionality provided by the software. 
 
@@ -176,9 +176,9 @@ Webpack- is a complier which takes JSX code and complies it down to real JavaScr
 
 --> A **prop** is any input you pass to a React component. Just like an HTML attribute, a prop name and value are added to the component. 
 
-**Caveat:** Components must return a single root element. This is wehy we add a <div> to contain all the elements. 
+**Caveat:** Components must return a single root element. This is wehy we add a *<div>* to contain all the elements. 
 
-All props are stored in *this.props* object. So to access this text prop from inside the component, we'd us this.props.text 
+All props are stored in *this.props* object. So to access this text prop from inside the component, we'd use this.props.text 
 
 ---
 
