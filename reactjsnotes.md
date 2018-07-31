@@ -255,9 +255,92 @@ The only place where you can assign **this.state** is the constructor.
 
                       or 
    you can use an arrow function in the callback, althought this can cause extra re-rendering so it's recommended to use the property intializer syntax. 
+---
 
 ### Conditional Rendering 
 
 Works the same way conditions work in JavaScript
 
+---
+
+### Rendering Multiple Components 
+
+-using JavaScript **map()** function 
+a "key", is a special string attribute you need to include when createing lists of elements. 
+
+--> **Keys** help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. 
+
+--> The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use **IDs** from your data as keys.
+
+--> When you don't have stable IDs for rendering items you may use the item index as a key as a last restort. 
+
+---
+
+### Controlled Components
+
+"Single Source of truth"
+
+---
+
+### Composition vs. Inheritance
+
+React- recommends to use composition over inheritance
+
+
+---
+
+### Thinking in React 
+
+Don't use state for static version. State is reserved only for interactivity, that is, data that changes over time. 
+
+---
+
+### Update state with setState
+
+--> Cannot update state directly, because React will have no idea that the state of your component actually changed. 
+
+--> To solve this problem React gives us a helper method called **setState**
+
+There are two ways to use setState:
+
+1. by passing setState a function, the function will be passed the previous state as its first arguement. 
+   * the object returned from this function will be merged with the current state to form the new state of the component. 
+
+**function**
+```JavaScript
+this.setState (() => ({
+  count:1
+}))
+```
+**function passed the previous state as its first arguement**
+
+```JavaScript
+this.setState((prevState) => ({
+  count: prevState.count + 1
+}))
+```
+
+2. pass in a object
+
+   * the object will be merged with the current state to form the new state of the component. 
+
+   ex. 
+
+```JavaScript
+this.setState ({
+  username: 'Tyler'
+})
+```
+
+--> You will want to use the functional setState when the new state of your component depends on the previous state
+
+*for anything else use the object setState*
+
+**Your UI is just a function of your state**
+
+---
+
+### How state is set
+
+Since state reflects mutable information that ultimately affects rendered output, a component may also update its state throughout its lifecycle using **this.setState**
 
