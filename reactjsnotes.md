@@ -226,4 +226,38 @@ Notes from [Facebook](https://reactjs.org)
 
 // wrong
 
+```JavaScript 
+this.state.comment ='Hello';
+```
+
+// correct 
+
+```JavaScript 
+this.setState({comment: 'Hello'});
+```
+
+The only place where you can assign **this.state** is the constructor.
+
+--> State, is often called local or encapselated. It's not accessible to any component other than the one that owns and sets it. 
+
+### Handeling Events 
+
+--> React events are named using camelCase, rather than lowercase 
+--> With *JSX* you pass a function as the event handler rather than a string. 
+
+* e, is a synthetic event
+
+* When using React you should generally not need to call addEventListener, to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered. 
+
+* When you define a component using an ES6 class, a common patter is for an event handler to be a method on the class. For, example, this toggle component renders a button that lets the user toggle between "on" and "off" states.
+
+* Experimental syntax- property initializer syntax to correctly bind callbacks:
+
+                      or 
+   you can use an arrow function in the callback, althought this can cause extra re-rendering so it's recommended to use the property intializer syntax. 
+
+### Conditional Rendering 
+
+Works the same way conditions work in JavaScript
+
 
