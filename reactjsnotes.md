@@ -8,12 +8,12 @@
 
 Top 3 Reasons:
 
-* compostional model
+* compositional model
 * the way data flows through a component 
 * React is really just JavaScript
 
 
-**Composition:** to combine simple functions to build more comlicated ones
+**Composition:** to combine simple functions to build more complicated ones
 
 ### Benefits of Composition:
 
@@ -64,13 +64,13 @@ ___
 
 --> React uses JavaScript objects to create React elements to describe what we want the page to look like and React is in charge of generating the DOM node to achieve the result
 
---> Note the difference between *impreative* and *declarative* code. 
+--> Note the difference between *imperative* and *declarative* code. 
 
-**Imprerative:** is when you list out the steps for the code 
+**Imperative:** is when you list out the steps for the code 
 
 **Declarative:** is when you declare exactly what you want the code to do 
 
-So, in other words we aren't telling React what to do; but rather writing React elements that decribes what the page should look like, and React does all the implementation work to get it done. 
+So, in other words we aren't telling React what to do; but rather writing React elements that describes what the page should look like, and React does all the implementation work to get it done. 
 
 --> When creating React elements it's important to remember that we are describing DOM nodes and not HTML strings
 
@@ -170,13 +170,13 @@ Webpack- is a complier which takes JSX code and complies it down to real JavaScr
 
 --> The way you build a React app is by building a bunch of smaller React Components and then composing them together 
 
---> We can think of passing *props* to components just as we pass arguements into functions. Just as we can access arguments passed into a regular JavaScript function, we can access a component's prop with **this.props** or props in the stateless functional components 
+--> We can think of passing *props* to components just as we pass arguments into functions. Just as we can access arguments passed into a regular JavaScript function, we can access a component's prop with **this.props** or props in the stateless functional components 
 
 --> When passing in a prop to a prop, you just type out the name of the prop as if it's a regular HTML attribute.
 
 --> A **prop** is any input you pass to a React component. Just like an HTML attribute, a prop name and value are added to the component. 
 
-**Caveat:** Components must return a single root element. This is wehy we add a *<div>* to contain all the elements. 
+**Caveat:** Components must return a single root element. This is why we add a *<div>* to contain all the elements. 
 
 All props are stored in *this.props* object. So to access this text prop from inside the component, we'd use this.props.text 
 
@@ -195,7 +195,7 @@ Stateless Functional Components are, stateless because these components do not h
 
 ### Add State to a Component 
 
-State is a key property of React components. Being familar with how state is used and how state is set and reset will help streamline building the UI of your App. 
+State is a key property of React components. Being familiar with how state is used and how state is set and reset will help streamline building the UI of your App. 
 
 ---
 
@@ -238,14 +238,14 @@ this.setState({comment: 'Hello'});
 
 The only place where you can assign **this.state** is the constructor.
 
---> State, is often called local or encapselated. It's not accessible to any component other than the one that owns and sets it. 
+--> State, is often called local or encapsulated. It's not accessible to any component other than the one that owns and sets it. 
 
-### Handeling Events 
+### Handling Events 
 
 --> React events are named using camelCase, rather than lowercase 
 --> With *JSX* you pass a function as the event handler rather than a string. 
 
-* e, is a synthetic event
+* **e**, is a synthetic event
 
 * When using React you should generally not need to call addEventListener, to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered. 
 
@@ -254,7 +254,7 @@ The only place where you can assign **this.state** is the constructor.
 * Experimental syntax- property initializer syntax to correctly bind callbacks:
 
                       or 
-   you can use an arrow function in the callback, althought this can cause extra re-rendering so it's recommended to use the property intializer syntax. 
+   you can use an arrow function in the callback, although this can cause extra re-rendering so it's recommended to use the property initializer syntax. 
 ---
 
 ### Conditional Rendering 
@@ -266,13 +266,13 @@ Works the same way conditions work in JavaScript
 ### Rendering Multiple Components 
 
 -using JavaScript **map()** function 
-a "key", is a special string attribute you need to include when createing lists of elements. 
+a "key", is a special string attribute you need to include when creating lists of elements. 
 
 --> **Keys** help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. 
 
 --> The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use **IDs** from your data as keys.
 
---> When you don't have stable IDs for rendering items you may use the item index as a key as a last restort. 
+--> When you don't have stable IDs for rendering items you may use the item index as a key as a last resort. 
 
 ---
 
@@ -303,7 +303,7 @@ Don't use state for static version. State is reserved only for interactivity, th
 
 There are two ways to use setState:
 
-1. by passing setState a function, the function will be passed the previous state as its first arguement. 
+1. by passing setState a function, the function will be passed the previous state as its first argument. 
    * the object returned from this function will be merged with the current state to form the new state of the component. 
 
 **function**
@@ -312,7 +312,7 @@ this.setState (() => ({
   count:1
 }))
 ```
-**function passed the previous state as its first arguement**
+**function passed the previous state as its first argument**
 
 ```JavaScript
 this.setState((prevState) => ({
@@ -344,3 +344,23 @@ this.setState ({
 
 Since state reflects mutable information that ultimately affects rendered output, a component may also update its state throughout its lifecycle using **this.setState**
 
+---
+**Most recent notes-- will go back and add missing notes soon**
+
+### Redux Middleware
+
+--> Redux makes state management more predictable: in order to change the store's state, an action describing that change must be dispatched to the reducer. 
+
+--> In turn,the reducer produces the new state. This new state replaces the previous state in the store. So the next time **store.getState** is called, the new, most up-to-date state is returned.
+
+--> In Between the dispatching of an action and the reducer running, we can introduce code called middleware to intercept the action before the reducer is invoked. 
+
+* What's great about middleware is that once it receives the action, it can carry out a number of operations, including:
+
+   * producing a side effect (e.g., logging information about the store)
+   * processing the action itself (e.g., making an asynchronous HTTP request)
+   * redirecting the action (e.g., to another piece of middleware)
+   * dispatching supplementary actions
+
+...or even some combination of the above! Middleware can do any of these before passing the action along to the reducer.
+ 
