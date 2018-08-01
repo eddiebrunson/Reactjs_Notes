@@ -461,11 +461,14 @@ const store = Redux.createStore( <reducer-function>, Redux.applyMiddleware(<midd
 
 To move away from the application being plain HTML and convert it to being powered by React. To do that, you will have to add a number of libraries:
 
-  * react 
-  * react-dom
-  * babel 
+  * react (npm i react)
+  * react-dom (npm i react-dom)
+  * babel (npm i babel) deprecated 
 
-  
+### Combining React and Redux 
+
+
+
 
 
 
