@@ -421,6 +421,52 @@ High-order functions are a powerful programming technique that allow functions t
 
 For a refresher on higher-order function check out lesson 2 in Object-Oriented JavaScript. 
 
+--> Any Middleware you supply as the second argument to **Redux.createStore()** will be run before the reducer is run. 
+
+### A New Middleware: Logging
+
+You can use multiple middleware functions in a single application. 
+
+**logger** will log out information about the state and action. 
+
+--> The benefits of this **logger()** middleware function are huge while developing the application. Using this middleware to intercept all dispatch calls and log out what the action is that's being dispatched and what the state changes to *after* the reducer has run. Being able to see this kind of information will be immensely helpful while you are developing your app. You can us this information to help you know what's gong on in your app and to help you track down any pesky bugs that creep in. 
+
+--> You don't have to use middleware in your Redux applications, but you can if you want to. And what's awesome is that you can supply one or many middleware functions to **Redux.applyMiddleware()**!
+
+  * **Redux.applyMiddleware()** can accept multiple arguments
+  * Middleware is optional 
+  * Middleware can be considered a third-party extension point between dispatching and having the action reach the reducer
+
+  ---
+
+  ### Summary
+
+--> Middleware is the suggested way to extend Redux with custom functionality.
+
+Middleware is added to the Redux store using **Redux.applyMiddleware()**. You can only add middleware when you initially create the store:
+
+```JavaScript 
+const store = Redux.createStore( <reducer-function>, Redux.applyMiddleware(<middleware-functions>) )
+```
+
+---
+
+### Further Research 
+
+[Middleware Docs](https://redux.js.org/advanced/middleware)
+
+---
+
+### Redux with React 
+
+To move away from the application being plain HTML and convert it to being powered by React. To do that, you will have to add a number of libraries:
+
+  * react 
+  * react-dom
+  * babel 
+
+  
+
 
 
 
