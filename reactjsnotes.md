@@ -467,6 +467,12 @@ To move away from the application being plain HTML and convert it to being power
 
 ### Combining React and Redux 
 
+Now it's time to convert HTML to a React application by connecting the React Components to a React application. 
+
+---
+
+### Summary 
+
 
 
 
