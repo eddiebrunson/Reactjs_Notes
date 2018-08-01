@@ -394,7 +394,36 @@ ___
 
 ### Applying Middelware 
 
-To implement middleware into a Redux app all you have to do is pass it in when creating the store. More specifically by passing in the **applyMiddleare()** function as an optional argument into **createStore()**. Here's <span style="color:red">**applyMiddleware()** </span> signature: 
+To implement middleware into a Redux app all you have to do is pass it in when creating the store. More specifically by passing in the **applyMiddleare()** function as an optional argument into **createStore()**. Here's **applyMiddleware()** signature: 
+
+```JavaScript
+applyMiddleware(...middlewares)
+```
+
+Note the *spread* operator on the middlewares parameter. This means that you can pass in as many different middleware as you want. Middleware is called in the order in which they were provided to **applyMiddleware()**
+
+Now, to create a Redux store that uses the **checker** middleware, you can use the following: 
+
+```JavaScript
+const store = Redux.createStore(rootReducer, Redux.applyMiddleware(checker))
+```
+
+---
+
+:red_circle: **Functions Returning Functions** :red_circle:
+
+Redux middleware leverages a concept called **higher-order functions**. A higher-order function is a function that either: 
+
+   * accepts a function as an argument 
+   * returns a function 
+
+High-order functions are a powerful programming technique that allow functions to be significantly more dynamic. The **createRemoveButton()** function is a higher-order function because the **onClick** parameter is expected to be a function because **onClick** is set up as an event listener callback function.
+
+For a refresher on higher-order function check out lesson 2 in Object-Oriented JavaScript. 
+
+
+
+
 
 
 
