@@ -394,6 +394,11 @@ ___
 
 ### Applying Middelware 
 
+To implement middleware into a Redux app all you have to do is pass it in when creating the store. More specifically by passing in the **applyMiddleare()** function as an optional argument into **createStore()**. Here's <span style="color:red">**applyMiddleware()** </span> signature: 
+
+
+
+
 
 
 
