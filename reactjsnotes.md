@@ -1,6 +1,6 @@
 # React Notes
 
-![](http://progressed.io/bar/25?title=Progress)
+![](http://progressed.io/bar/30?title=Progress)
 
 ---
 
@@ -363,4 +363,38 @@ Since state reflects mutable information that ultimately affects rendered output
    * dispatching supplementary actions
 
 ...or even some combination of the above! Middleware can do any of these before passing the action along to the reducer.
- 
+
+---
+
+### Where Middelware Fits
+
+Originally, in the example code structure **checkAndDispatch()** function had to run before **store.dispatch()**. Why? Because, when **store.dispatch()** is invoked, it immediately calls the reducer that was passed in when **createStore()** was invoked. 
+
+In the beginning the **dispatch()** function looked this and it is very similar to the real Redux **dispatch()** function: 
+
+```JavaScript 
+const dispatch = (action) => {
+  state = reducer(state, action)
+  listeners.forEach((listener) => listener())	
+} 
+```
+
+Calling **store.dispatch()** will immediately invoke the **reducer()** function. There is no way to run anything in between the two function calls. So that's why you have to make **checkAndDispatch()** so that you can run verification code before calling **store.dispatch()**. 
+
+However, that is maintainable. 
+
+With Redux's middelware feature, we can run code *between* the call to **store.dispatch() and **reducer()**. The reason this works, is because Redux's version of **dispatch()** is a bit more sophisticated, because middelware functions are provided when you create the store. 
+
+```JavaScript 
+const store = Redux.createStore( <reducer-function>, <middleware-function> )
+```
+Redux's **createStore()** method takes the reducer function as its first argument, but then it can take a second argument of the middleware functions to run. Because we set up the Redux store with knowledge of the middleware function, it runs the middelware function between **store.dispatch()** and the invocation of the reducer. 
+
+___
+
+### Applying Middelware 
+
+
+
+
+
