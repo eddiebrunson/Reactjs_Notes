@@ -465,6 +465,15 @@ To move away from the application being plain HTML and convert it to being power
   * react-dom (npm i react-dom)
   * babel (npm i babel) deprecated 
 
+  The following are the needed packages:
+
+<script src="https://unpkg.com/react@16.3.0-alpha.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.0-alpha.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+
+
 ### Combining React and Redux 
 
 Now it's time to convert HTML to a React application by connecting the React Components to a React application. 
@@ -472,6 +481,11 @@ Now it's time to convert HTML to a React application by connecting the React Com
 ---
 
 ### Summary 
+
+
+
+
+
 
 
 
