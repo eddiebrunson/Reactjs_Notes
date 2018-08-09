@@ -482,6 +482,24 @@ Now it's time to convert HTML to a React application by connecting the React Com
 
 ### Summary 
 
+Here code organization was improved and reusable parts of code were separate. 
+
+## Asynchronous Redux 
+
+Interacting with an external database with an API. 
+
+--> How to make *asynchronous* requests in Redux
+
+The way Redux works is:
+
+   * **store.dispatch()** calls are made
+   * if the Redux store was set up with any middleware, those function are run
+   * then the reducer is invoked 
+---
+
+### External Data
+
+
 
 
 
