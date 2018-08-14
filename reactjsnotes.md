@@ -503,6 +503,28 @@ The way Redux works is:
 
 --> the use case to handle is if the return fails 
 
+--> Next, you must tell the Redux store about the data
+
+--> Then create a brand new action creator called **receiveDataAction**
+
+**Promise-Based API**
+
+The methods in the provided API are all Promise-based. Let's take a look at the .fetchTodos() method:
+
+```JavaScript 
+API.fetchTodos = function () {
+  return new Promise((res, rej) => {
+    setTimeout(function () {
+      res(todos);
+    }, 2000);
+  });
+};
+```
+
+Since the API is Promise-based, we can use Promise.all() to wait until all Promises have resolved before displaying the content to the user.
+
+Promises are asynchronous, and this lesson is all about working with asynchronous data and asynchronous requests.
+
 
 ---
 
