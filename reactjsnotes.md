@@ -499,6 +499,26 @@ The way Redux works is:
 
 ### External Data
 
+--> link to external API which will call methods such as **API.fetchGoals** which will return a promise that after 2 seconds will resolve a goal 
+
+--> the use case to handle is if the return fails 
+
+
+---
+
+### Summary 
+
+Learned how to work with an external API. Also how to add a new action (**RECEIVE_DATA**), create a new action creator, and build a new reducer. Which all handle different states our app can be in while getting remote data:
+
+  * before the app has the data 
+  * while the app is fetching the data
+  * after the data has been received 
+
+
+
+
+
+ 
 
 
 
