@@ -521,9 +521,9 @@ API.fetchTodos = function () {
 };
 ```
 
-Since the API is Promise-based, we can use Promise.all() to wait until all Promises have resolved before displaying the content to the user.
+* Since the API is Promise-based, we can use Promise.all() to wait until all Promises have resolved before displaying the content to the user.
 
-Promises are asynchronous, and this lesson is all about working with asynchronous data and asynchronous requests.
+* **Promises are asynchronous**, and this lesson is all about working with asynchronous data and asynchronous requests.
 
 
 ---
@@ -536,8 +536,13 @@ Learned how to work with an external API. Also how to add a new action (**RECEIV
   * while the app is fetching the data
   * after the data has been received 
 
+### Optimistic Updates 
 
+---> When dealing with asynchronous requests, there will always be some delay involved. If not taken into consideration, this could cause some weird UI issues. 
 
+--> For example, let’s say when a user wants to delete a todo item, that whole process from when the user clicks“delete” to when that item is removed from the database takes two seconds. If you designed the UI to wait for the confirmation from the server to remove the item from the list on the client, your user would click “delete” and then would have to wait for two seconds to see that update in the UI. That’s not the best experience.
+
+--> Instead what you can do is a technique called optimistic updates. Instead of waiting for confirmation from the server, just instantly remove the user from the UI when the user clicks “delete”, then, if the server responds back with an error that the user wasn’t actually deleted, you can add the information back in. This way your user gets that instant feedback from the UI, but, under the hood, the request is still asynchronous.
 
 
  
