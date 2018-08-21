@@ -544,6 +544,20 @@ Learned how to work with an external API. Also how to add a new action (**RECEIV
 
 --> Instead what you can do is a technique called optimistic updates. Instead of waiting for confirmation from the server, just instantly remove the user from the UI when the user clicks “delete”, then, if the server responds back with an error that the user wasn’t actually deleted, you can add the information back in. This way your user gets that instant feedback from the UI, but, under the hood, the request is still asynchronous.
 
+### Summary 
+
+Concepts covered:
+
+   * removed Todos and Goals 
+   * toggle the state of a Todos
+   * save a new Todo or Goal 
+
+--> Here changes are done *optimistically* therefore the assumption is taken that the change will succeed correctly on the server, so the UI is immediately updated, and if there is an error it will revert back to the original state if the API returns an error. 
+
+--> More realistic and dynamic user experience 
+
+
+
 
  
 
