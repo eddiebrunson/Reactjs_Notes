@@ -556,9 +556,44 @@ Concepts covered:
 
 --> More realistic and dynamic user experience 
 
+### Thunk 
 
 
+Best to keep UI Logic Component separate from the data fetching API logic in a Action creator. Therefore, the action creator will be responsible for fetching the data it needs to create the actual action. 
 
+For Example the code for removing a todo item looks like this:
+
+```JavaScript
+removeItem(item) {
+  const { dispatch } = this.props.store
+
+  dispatch(removeTodoAction(item.id))
+
+  return API.deleteTodo(item.id)
+    .catch(() => {
+      dispatch(addTodoAction(item))
+      alert('An error occured. Try again.')
+    })
+  }
+}
+```
+
+In the above code snippet component-specific code is mixed in with API-specific code.
+
+--> By moving the data-fetching logic from the component to the action creator, the final **removeItem()** method looks like this:
+
+```JavaScript
+removeItem(item) {
+  const { dispatch } = this.props.store
+
+  return dispatch(handleDeleteTodo(item))
+}
+```
+
+Now the **removeItem()** function only has one task; dispatching that a specific item needs to be deleted. 
+
+
+Now, the **handleDeleteTodo** action creator needs to make an asynchronous request before it returns the action. 
  
 
 
