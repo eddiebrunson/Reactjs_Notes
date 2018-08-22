@@ -598,6 +598,55 @@ Now, the **handleDeleteTodo** action creator needs to make an asynchronous reque
 
 
 
+### Benefits of Thunks
+
+--> Out of the box, the Redux store can only support the synchronous flow of data. While, middleware, like **thunk** allows for asynchronicity in a Redux application. 
+
+--> Thunk is basically a wrapper for the store's **dispatch()** method; rather than returning action objects, thunk action creators are used to dispatch functions or event Promises. 
+
+* Thunk middleware can be used to delay an action dispatch, or to dispatch only if certain conditions are met. The logic lives inside action creators rather than inside components. 
+
+
+___
+
+### Project Walkthrough 
+
+To make the understanding of React and Redux, stronger there is a project called "Chirper" which is a walkthrough project. It should be used to model after for the "Would you Rather" Project. 
+
+Building this walkthrough project will help with understanding the importance of improving predictability of an application's state; establishing strict rules for getting, listening, and updating the store; and identifying what state should live inside of Redux and what state should live inside of React components. 
+
+
+**Important to plan our the architecture of the application before starting to code**
+
+
+
+### A Guide for Planning Stages of Your Project 
+
+1. Identify What Each View Should Look Like
+2. Break Each View Into a Hierarchy of Components 
+3. Determine What Events Happen in the App
+4. Determine What Data Lives in the Store
+
+
+### Planning Stage: Steps 1&2 - Break Down Views and Components 
+
+**View for the Dashboard Page**
+
+-displays the navigation and tweets
+
+### Dashboard View Requirements 
+
+* is located at the home route **(/)**
+* shows tweets sorted from most recently added at the top, to oldest at the bottom
+* each tweet will show:
+  * the author
+  * the time stamp 
+  * who the author is replying to 
+  * the text of the tweet 
+  * a reply button - with the number of replies (if higer than 0)
+  * a like button - with the number of likes (if higher than 0)
+
+#### View for the Tweet Page
 
 
 
