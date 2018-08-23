@@ -775,6 +775,19 @@ Next, we need to determine which of the above data will live in the store.
 
 ### Planning Stage: Step 4 - Data and the Store 
 
+The main problems that Redux and the react-redux bindings is meant to solve the following:
+
+  * Propagation of props through the entire component tree
+  * Ensuring consistency and predictability of the state across the app. 
+
+:arrow_right: According to **Dan Abramov**, the creator of Redux, we should follow the following principle for determining whether to store a piece of data in the store or in a React component: 
+
+   :::: "Use Redux for state that matters globally or is mutated in complex ways... The rule of thumb is: do whatever is less awkward."
+
+Review (Organizing State)[https://redux.js.org/faq/organizingstate] and (How to choses between Redux's store and React's state?)[https://github.com/reduxjs/redux/issues/1287]
+
+
+
 
 
 
