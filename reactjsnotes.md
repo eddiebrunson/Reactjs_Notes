@@ -784,7 +784,7 @@ The main problems that Redux and the react-redux bindings is meant to solve the 
 
    :::: "Use Redux for state that matters globally or is mutated in complex ways... The rule of thumb is: do whatever is less awkward."
 
-Review (Organizing State)[https://redux.js.org/faq/organizingstate] and (How to choses between Redux's store and React's state?)[https://github.com/reduxjs/redux/issues/1287]
+Review [Organizing State](https://redux.js.org/faq/organizingstate) and [How to choses between Redux's store and React's state?](https://github.com/reduxjs/redux/issues/1287)
 
 
 
