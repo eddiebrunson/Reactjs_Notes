@@ -648,6 +648,105 @@ Building this walkthrough project will help with understanding the importance of
 
 #### View for the Tweet Page
 
+#### Tweet Page View Requirements 
+
+  * is located at /tweet/:id
+  * shows an individuals tweet
+    * the author
+    * the time stamp 
+    * a reply button - with the number of replies (if higher than 0)
+    * a like button - with the number of likes (if higher than 0)
+
+  * has a reply form 
+  * shows all replies 
+
+#### View for Creating a New Tweet 
+
+
+#### The New Tweet View Requirements 
+
+  * is located at **/new**
+  * has a textbox for adding a new tweet
+
+#### View Recap 
+
+The 3 views needed for this app:
+
+  * Dashboard 
+  * Tweet 
+  * New Tweet 
+
+#### Stepm 2: Break Each View Into a Hierarchy of Components 
+  * draw boxes around every component 
+  * arrange our components into a hierarchy 
+
+  ---
+
+  Components let you split the UI into independent, resuable chunks. 
+
+  Each view typically has a component that represents that view 
+
+  Presentational Components don't know where their data comes from 
+
+  Components that are connected to the store are called "containers"
+
+--> Components are best used to isolate specific sections of the app, either as access data (containers) or focused on the UI (presentational).
+
+---
+#### Components for the Dashboard View 
+
+The Dashboard can be broken up into  React Components 
+
+  * App - the overall container for the project 
+  * Navigation - displays the navigation 
+  * Tweets List - reponsible for the entire list of tweets
+  * Tweet - in charge of displaying the content for a single tweet 
+
+#### Components for the Tweet View 
+
+The Tweet view can be broken up into React Components 
+
+  * App - the overall container for the project 
+  * Navigation - displays the navigation 
+  * Tweet Container - displays a list of tweets 
+  * Tweet - displays the content for a single tweet 
+  * New Tweet - display the form to create a new tweet (reply)
+
+
+#### Components for the New Tweet View 
+
+The New Tweet view can be broken up int React Components 
+
+  * App - the overall container for the project 
+  * Navigation - displays the navigation 
+  * New Tweet - display the form to create a new tweet 
+
+#### All Components 
+
+This application will have the following components:
+  
+  * App 
+  * Navigation 
+  * Tweets List 
+  * Tweet Container 
+  * Tweet 
+  * New Tweet 
+
+The component hierarchy tells us which components will be used inside of other components. It gives use the skeleton of our app. These are presentational components. 
+
+Right now there is no need to focus on which components will later becomes containers. 
+
+The above steps are just focused on React app, but we haven't gotten to using Redux yet. 
+
+As Redux doesn't care how your application looks or what components it uses. Redux gives us a way to manage the *state* of the application in a predictable way. 
+
+---
+
+### Planning Stage: Step 3 -Determine Events in the App
+
+## Determine What Events Happen in the App
+
+Now we need to determine *what* is happening in each component. So it's time to determine what actions the app or the user is performing on the data. Is the data being set, modified, or deleted?... then you will need an action to keep track of that event! 
 
 
 
