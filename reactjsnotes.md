@@ -1,6 +1,6 @@
 # React Notes
 
-![](http://progressed.io/bar/30?title=Progress)
+![](http://progressed.io/bar/55?title=Progress)
 
 ---
 
@@ -744,11 +744,36 @@ As Redux doesn't care how your application looks or what components it uses. Red
 
 ### Planning Stage: Step 3 -Determine Events in the App
 
-## Determine What Events Happen in the App
+#### Determine What Events Happen in the App
 
 Now we need to determine *what* is happening in each component. So it's time to determine what actions the app or the user is performing on the data. Is the data being set, modified, or deleted?... then you will need an action to keep track of that event! 
 
+**Actions are bold text**
 
+#### Tweets List Component 
+
+The only information that we see is that we'll have to get a list of all the tweets. So for this component we just need to: 
+  
+  * get the **tweets**
+
+The action type for this event will be 
+
+GET_LIST_OF_TWEETS or GET_DATA
+
+#### Tweet Component 
+
+* We get a particular tweet from a list of **tweets** 
+* We get the replies to a specific tweet from a list of **tweets**
+
+#### New Tweet Components 
+
+* We get this **authedUser** so the user can create a new **tweet** 
+
+* We set the **text of the new tweet**
+
+Next, we need to determine which of the above data will live in the store.
+
+### Planning Stage: Step 4 - Data and the Store 
 
 
 
