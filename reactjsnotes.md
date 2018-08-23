@@ -786,6 +786,29 @@ The main problems that Redux and the react-redux bindings is meant to solve the 
 
 Review [Organizing State](https://redux.js.org/faq/organizingstate) and [How to choses between Redux's store and React's state?](https://github.com/reduxjs/redux/issues/1287)
 
+Text of the new tweet Used by: New Tweet Component 
+
+This piece of data is not used by multiple components and is not mutated in a complex way. That means that it's a great candidate for component state instead of app state that resides in the store. 
+
+Tweets Used by: Dashboard Component, Tweet Page Component, Tweet Component 
+
+The the Tweet Page Component, we need to show the reply tweets. The started code in **_Data.js** shows how tweets are stored in the database:
+
+```JavaScript 
+let tweets = {
+  tweetId: {
+    id: tweetId,
+    text: tweetText,
+    author: userId,
+    timestamp: timestamp,
+    likes: [userId1, userId2],
+    replies: [tweetId1, tweetId2],
+    replyingTo: tweetId_OR_null
+  }
+};
+```
+
+
 
 
 
