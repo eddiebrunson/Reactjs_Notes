@@ -1,6 +1,6 @@
 # React Notes 
 
-![](http://progressed.io/bar/25?title=Progress)
+![progress](https://progress-bar.dev/50/ "progress")
 
 ---
 
