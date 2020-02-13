@@ -853,7 +853,7 @@ ___
 
 
 
-Create React Native App
+**Create React Native App**
 
 When we build our app throughout this course, we'll be building it for both Android and iOS. One of the puzzles at hand is that we'll need to support two separate development environments: iOS uses Xcode, and Android uses Android Studio. This introduces a lot of complexity into this course; after all, both Xcode and Android Studio could probably each be their own set of courses!
 
@@ -861,14 +861,21 @@ Luckily for us, there's a new tool we can use that will allow us to develop for 
 
 Just like Create React App, there are pros and cons to using Create React Native App (CRNA). First, the pros.
 
-Create React Native App Pros
-The obvious one is that Create React Native app minimizes the amount of time it takes to create a "hello world" application. The fact that you can run a command in your terminal and 15 seconds later have a project that run on both Android and iOS using JavaScript is pretty incredible. Next, and we'll look deeper into this one later on, Create React Native App allows you to easily develop on your own device. This way, any changes you make in your text editor will instantly show on the app running on your local phone. Next, and this is something I mentioned earlier, with Create React Native App you just need one build tool. You don't have to worry about Xcode or Android Studio. Lastly, there's no lock in. Just like Create React App, you can "eject" at anytime.
+#### Create React Native App Pros
+
+The obvious one is that Create React Native app minimizes the amount of time it takes to create a "hello world" application. 
+
+The fact that you can run a command in your terminal and 15 seconds later have a project that run on both Android and iOS using JavaScript is pretty incredible. Next, and we'll look deeper into this one later on, Create React Native App allows you to easily develop on your own device. 
+
+This way, any changes you make in your text editor will instantly show on the app running on your local phone. Next, and this is something I mentioned earlier, with Create React Native App you just need one build tool. You don't have to worry about Xcode or Android Studio. Lastly, there's no lock in. Just like Create React App, you can "eject" at anytime.
 
 #### Create React Native Cons
+
 Now, there are some cons, and granted they're pretty minor, but they're good to be aware of. First, if you're building an app that's going to be added to an existing native iOS or Android application, Create React Native App won't work. Second, if you need to build your own bridge between React Native and some native API that Create React Native App doesn't expose (which is pretty rare), Create React Native App won't work.
 
 Let's jump right in!
-Install Create React Native App
+
+#### Install Create React Native App
 In order to use Create React Native App, go ahead and install it once globally:
 
 `npm install -g create-react-native-app`
@@ -895,12 +902,15 @@ We'll be relying on Expo heavily in this course. First things first: you need to
 ---
 
 #### Simulators 📱
+
 Expo together with Create React Native App is the fastest way to get up and running, but there are also other ways to start building your projects, as well. If you're looking to integrate React Native into an existing app, or if you've ejected your app from Create React Native App, feel free to follow the Building Projects with Native Code tab from the React Native docs. The guide also sets up iOS and Android simulators, allowing you to view your mobile apps right on your machine!
 
 We'll be utilizing both iOS and Android simulators in the interest of demoing projects in this course, but they are completely optional in getting started.
 
-Installing Simulators
+#### Installing Simulators
+
 🔷 iPhone Simulator 🔷
+
 iOS apps can only be developed on a Mac unless you have a virtual machine set up on your machine. To set up the iPhone simulator on your Mac, follow these instructions:
 
 1) Go to the App Store.
@@ -919,7 +929,11 @@ If you already have Xcode installed, please make sure that you update it. Then, 
 
 7) That’s it!
 
+____
+
+
 🔷Android Simulator 🔷
+
 The setup is kind of complicated, but we'll get through it together.
 
 Part 1
@@ -978,7 +992,7 @@ c) On macOS, you will also need to add platform-tools to your ~/.bash_profile or
 
 d) Make sure that you can run adb from your terminal.
 
-Part 2
+**Part 2**
 
 You have a choice of either using the Android Studio Emulator or Genymotion as your simulator. You don't have to install both.
 
@@ -1001,7 +1015,7 @@ If you see any error messages that prompt you to install additional software, pl
 
 8) Click the play button.
 
-Directions for Setting up Genymotion
+**Directions for Setting up Genymotion**
 
 Download and install Genymotion(it is free for personal use).
 Set up an Android emulator by selecting the type of phone you want to emulate and wait for the setup to complete.
@@ -1014,9 +1028,10 @@ Close Android Studio if you still have it open. Check to make sure that Android 
 Start the GenyMotion Emulator by clicking "Start".
 The majority of these instructions are from the Genymotion documentation.
 
-💡 Bundling Error (Unexpected Token)💡
+####💡 Bundling Error (Unexpected Token)💡
 If you're seeing bundling errors while attempting to run a simulator, try changing your Babel preset for React Native to version 2.1.0. Then, remove your node-modules directory, reinstall with npm install, and run the simulator again. For more information, check out this post on Stack Overflow.
-💡 Error: Cannot Connect to Daemon💡
+
+####💡 Error: Cannot Connect to Daemon💡
 If you see this message "Couldn't start project on Android: could not install *smartsocket* listener: cannot bind to 127.0.0.1:5037: Only one usage of each socket address (protocol/network address/port) is normally permitted. Could not read ok from ADB Server. Failed to start daemon. Error: cannot connect to daemon," please restart your computer and try again.
 A Note About Expo
 
@@ -1048,6 +1063,9 @@ Next, you’re going to create three files inside of your utils folder.
 colors.js
 helpers.js
 _calendar.js (make sure to include the underscore!)
+
+
+
 Paste the following code into your utils/colors.js file
 
 // utils/colors.js
@@ -1105,7 +1123,9 @@ export function timeToString (time = Date.now()) {
   const todayUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
   return todayUTC.toISOString().split('T')[0]
 }
-Finally, paste the following code inside of your utils/_calendar.js file.
+Finally, paste the following code inside of your utils/_calendar.js file
+
+
 
 ```JavaScript
 // utils/_calendar.js
