@@ -849,13 +849,13 @@ Further Research
 
 ___
 
-#### Dev Environment setup
+### Dev Environment setup
 
 
 
-**Create React Native App**
+#### Create React Native App
 
-When we build our app throughout this course, we'll be building it for both Android and iOS. One of the puzzles at hand is that we'll need to support two separate development environments: iOS uses Xcode, and Android uses Android Studio. This introduces a lot of complexity into this course; after all, both Xcode and Android Studio could probably each be their own set of courses!
+When we build our app throughout this course, we'll be building it for both Android and iOS. One of the puzzles at hand is that we'll need to support two separate development environments: iOS uses Xcode, and Android uses A`ndroid Studio`. This introduces a lot of complexity into this course; after all, both `Xcode` and Android Studio could probably each be their own set of courses!
 
 Luckily for us, there's a new tool we can use that will allow us to develop for both Android and iOS without ever opening up Android Studio or Xcode. It's called, not surprisingly, Create React Native App. It's similar to Create React App in that all you have to do is install the CLI via NPM. Then, via the CLI, you can easily scaffold a brand new React Native project.
 
@@ -882,6 +882,7 @@ In order to use Create React Native App, go ahead and install it once globally:
 Alternatively, feel free to use yarn as well (visit here for setup instructions):
 
 `yarn global add create-react-native-app`
+
 ⚠️ Using Yarn ⚠️
 Create React Native App does not currently work well with NPM v5, due to bugs in NPM. While there should be no issues with NPM v3 or v4, we'll be using yarn from here on out just to be safe.
 
@@ -909,7 +910,7 @@ We'll be utilizing both iOS and Android simulators in the interest of demoing pr
 
 #### Installing Simulators
 
-🔷 iPhone Simulator 🔷
+🔷 **iPhone Simulator** 🔷
 
 iOS apps can only be developed on a Mac unless you have a virtual machine set up on your machine. To set up the iPhone simulator on your Mac, follow these instructions:
 
@@ -932,7 +933,7 @@ If you already have Xcode installed, please make sure that you update it. Then, 
 ____
 
 
-🔷Android Simulator 🔷
+🔷 **Android Simulator** 🔷
 
 The setup is kind of complicated, but we'll get through it together.
 
@@ -988,7 +989,7 @@ a) Open Android Studio. Click on "Configure" and select "SDK Manager" again. Go 
 
 b) Look at the path that’s filled in for the "Android SDK Location" section. It should be something like: /Users/yourName/Library/Android/sdk. If you are on macOS or Linux, add the Android SDK location to your PATH using ~/.bash_profile or ~/.bash_rc (e.g. echo 'export PATH=$PATH:~/Library/Android/sdk/'>>~/.bash_profile).
 
-c) On macOS, you will also need to add platform-tools to your ~/.bash_profile or ~/.bash_rc (e.g. echo 'export PATH=$PATH:~/Library/Android/sdk/platform-tools' >>~/.bash_profile, source ~/.bash_profile).
+c) `On macOS, you will also need to add platform-tools to your ~/.bash_profile or ~/.bash_rc (e.g. echo 'export PATH=$PATH:~/Library/Android/sdk/platform-tools' >>~/.bash_profile, source ~/.bash_profile).`
 
 d) Make sure that you can run adb from your terminal.
 
@@ -1002,9 +1003,7 @@ Directions for Setting up the Android Studio Emulator
 
 2) Click "Start a new Android Studio project". You don't need to change any of the settings; just click through to "Finish". Click "Finish".
 
-3) Once a new project is created, look at the messages inside the Gradle Console.
-
-If you see any error messages that prompt you to install additional software, please install it.
+3) Once a new project is created, look at the messages inside the Gradle Console. If you see any error messages that prompt you to install additional software, please install it.
 
 4) Select "Tools" --> "AVD Manager". Ensure that there's a checkmark next to "Enable ADB Integration".
 5) Click "Create Virtual Device".
@@ -1028,10 +1027,10 @@ Close Android Studio if you still have it open. Check to make sure that Android 
 Start the GenyMotion Emulator by clicking "Start".
 The majority of these instructions are from the Genymotion documentation.
 
-####💡 Bundling Error (Unexpected Token)💡
+#### 💡 Bundling Error (Unexpected Token)💡
 If you're seeing bundling errors while attempting to run a simulator, try changing your Babel preset for React Native to version 2.1.0. Then, remove your node-modules directory, reinstall with npm install, and run the simulator again. For more information, check out this post on Stack Overflow.
 
-####💡 Error: Cannot Connect to Daemon💡
+#### 💡 Error: Cannot Connect to Daemon💡
 If you see this message "Couldn't start project on Android: could not install *smartsocket* listener: cannot bind to 127.0.0.1:5037: Only one usage of each socket address (protocol/network address/port) is normally permitted. Could not read ok from ADB Server. Failed to start daemon. Error: cannot connect to daemon," please restart your computer and try again.
 A Note About Expo
 
@@ -1196,3 +1195,7 @@ Development on your own device via Expo
 A single build tool
 No lock-in (i.e., ejection at any time)
 You can also set up simulators to aid in development as well. But regardless of which platform we choose to develop for (iOS, Android), and which environment we're in (Mac, Windows, Linux) -- we're just building with the same old JavaScript that we're used to!
+
+___
+
+
