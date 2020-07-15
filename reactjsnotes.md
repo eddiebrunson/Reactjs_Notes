@@ -682,7 +682,7 @@ The 3 views needed for this app:
 
   ---
 
-  Components let you split the UI into independent, resuable chunks. 
+  Components let you split the UI into independent, reusable chunks. 
 
   Each view typically has a component that represents that view 
 
@@ -699,7 +699,7 @@ The Dashboard can be broken up into  React Components
 
   * App - the overall container for the project 
   * Navigation - displays the navigation 
-  * Tweets List - reponsible for the entire list of tweets
+  * Tweets List - responsible for the entire list of tweets
   * Tweet - in charge of displaying the content for a single tweet 
 
 #### Components for the Tweet View 
